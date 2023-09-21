@@ -42,8 +42,7 @@ const myDataBase = await client.db('database').collection('users');
   auth(app, myDataBase);
 
 
-
-   let currentUsers = 0;
+let currentUsers = 0;
   io.on('connection', (socket) => {
     ++currentUsers;
     io.emit('user count', currentUsers);
