@@ -6,16 +6,16 @@ const { ObjectID } = require('mongodb');
 const GitHubStrategy = require('passport-github').Strategy;
 
 module.exports = function (app, myDataBase) {
-   /* passport.use(new GitHubStrategy({
+    passport.use(new GitHubStrategy({
       clientID:"377eb655a5babb5bf61c",
       clientSecret: "d711d44d305d20a468786c80aa0faa1ecae0a879",
-      callbackURL: 'https://localhost:3000/auth/github/callback'
+      callbackURL: 'https://redxyoussef01githubio-production.up.railway.app/auth/github/callback'
     },
     function (accessToken, refreshToken, profile, cb) {
       console.log(profile);
     
     }
-  ));*/
+  ));
 
 
 
