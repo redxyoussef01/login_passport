@@ -16,6 +16,8 @@ module.exports = function (app, myDataBase) {
     res.redirect('/profile');
   });
 
+  app.route("/chat").get(ensureAuthenticated , (req , res ) => 
+  res.render(process.cwd() + '/view/pug/chat') , {user : req.user})
   
 
   app.route('/profile').get(ensureAuthenticated, (req,res) => {
