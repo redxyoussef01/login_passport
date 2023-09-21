@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
   /*global io*/
-  const socket = io.connect('https://redxyoussef01githubio-production.up.railway.app/');
+  let socket = io();
   
 socket.on('user count', function (data) {
     console.log(data);
