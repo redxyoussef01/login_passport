@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
   /*global io*/
-  let socket = io();
+  const socket = io.connect('https://redxyoussef01githubio-production.up.railway.app/');
   
   // Form submittion with new message in field with id 'm'
   $('form').submit(function () {
