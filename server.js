@@ -63,11 +63,13 @@ let currentUsers = 0;
     ++currentUsers;
     io.emit('user count', currentUsers);
     console.log('A user has connected');
+    console.log(currentUsers);
 
   socket.on('disconnect', () => {
       console.log('A user has disconnected');
       --currentUsers;
       io.emit('user count', currentUsers);
+      console.log(currentUsers);
     });
 
   });
