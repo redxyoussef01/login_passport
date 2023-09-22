@@ -17,7 +17,7 @@ module.exports = function (app, myDataBase) {
   });
 
 
-router.get('/chat', ensureAuthenticated, (req, res) => {
+app.get('/chat', ensureAuthenticated, (req, res) => {
   res.render('chat', { user: req.user });
 });
 
