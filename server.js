@@ -33,7 +33,9 @@ app.use(session({
   secret: "123",
   resave: true,
   saveUninitialized: true,
-  cookie: { secure: false }
+  cookie: { secure: false },
+  key: 'express.sid',
+  store: store
 }));
 
 app.use(passport.initialize());
@@ -61,7 +63,7 @@ const myDataBase = await client.db('database').collection('users');
 let currentUsers = 0;
   io.on('connection', (socket) => {
     ++currentUsers;
-    io.emit('user', {
+      io.emit('user', {
       username: socket.request.user.username,
       currentUsers,
       connected: true
@@ -93,7 +95,7 @@ let currentUsers = 0;
 
 function onAuthorizeSuccess(data, accept) {
   console.log('successful connection to socket.io');
-
+  console.log('user ' + socket.request.user.username + ' connected');
   accept(null, true);
 }
 
