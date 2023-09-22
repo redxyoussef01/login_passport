@@ -44,7 +44,7 @@ io.use(
   passportSocketIo.authorize({
     cookieParser: cookieParser,
     key: 'express.sid',
-    secret: process.env.SESSION_SECRET,
+    secret: "123",
     store: store,
     success: onAuthorizeSuccess,
     fail: onAuthorizeFail
