@@ -70,7 +70,9 @@ let currentUsers = 0;
     });
     console.log('A user has connected');
     console.log(currentUsers);
-
+    socket.on('chat message', (message) => {
+      io.emit('chat message', { username: socket.request.user.username, message });
+    });
   socket.on('disconnect', () => {
       console.log('A user has disconnected');
       --currentUsers;
