@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    let socket = io();
+    let socket = io("https://redxyoussef01githubio-production.up.railway.app/chat");
   socket.on('user count', function (data) {
     console.log(data);
   });
