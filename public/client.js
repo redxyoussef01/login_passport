@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    let socket = io("https://redxyoussef01githubio-production.up.railway.app/");
+    let socket = io();
 
 
   socket.on('user', (data) => {
